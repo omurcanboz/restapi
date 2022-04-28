@@ -23,7 +23,7 @@ public class CourseController {
     }
 
     @PostMapping
-    public void save(@RequestBody CourseDto course) {
+    public void save(@RequestBody Course course) {
         courseService.save(course);
     }
 

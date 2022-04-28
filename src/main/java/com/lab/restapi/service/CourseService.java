@@ -11,6 +11,8 @@ public interface CourseService {
 
     void save(CourseDto course);
 
+    void save(Course course);
+
     List<CourseDto> getAll();
 
     Course getById(long id);

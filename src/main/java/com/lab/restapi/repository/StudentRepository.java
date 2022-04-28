@@ -2,13 +2,18 @@ package com.lab.restapi.repository;
 
 import com.lab.restapi.entity.Course;
 import com.lab.restapi.entity.Student;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class StudentRepository {
+public interface StudentRepository extends CrudRepository<Student, Long> {
+
+    List<Student> findAllByMajor(String major);
+
+    List<Course> findAllById(long id);
 
     /*
 

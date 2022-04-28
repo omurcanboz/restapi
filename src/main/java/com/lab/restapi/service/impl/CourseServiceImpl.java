@@ -29,9 +29,15 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public void save(Course course) {
+        courseRepository.save(course);
+    }
+
+    @Override
     public List<CourseDto> getAll() {
 
-        var entityList = courseRepository.getAll();
+        //var entityList = courseRepository.getAll();
+        var entityList = courseRepository.findAll();
 
         var result = new ArrayList<CourseDto>();
 
@@ -47,11 +53,13 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course getById(long id) {
-        return courseRepository.getById(id);
+        //return courseRepository.getById(id);
+        return courseRepository.findById(id).get();
     }
 
     @Override
     public void delete(long id) {
-        courseRepository.delete(id);
+        //courseRepository.delete(id);
+        courseRepository.deleteById(id);
     }
 }

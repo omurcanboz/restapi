@@ -16,6 +16,7 @@ public class Student {
     private String lastName;
     private String email;
     private String major;
+    private double gpa;
     @OneToMany
     private List<Course> coursesTaken;
 }

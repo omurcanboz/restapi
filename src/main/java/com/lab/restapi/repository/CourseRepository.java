@@ -1,6 +1,7 @@
 package com.lab.restapi.repository;
 
 import com.lab.restapi.entity.Course;
+import com.lab.restapi.entity.Student;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +10,6 @@ import java.util.List;
 
 @Repository
 public interface CourseRepository extends CrudRepository<Course, Long> {
-
 
 
 
